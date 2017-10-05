@@ -9,7 +9,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        powershell(script: 'TurnToStone.ps1', returnStdout: true)
+        powershell(script: 'scripts/TurnToStone.ps1', returnStdout: true)
       }
     }
   }
