@@ -7,5 +7,10 @@ pipeline {
         powershell 'scripts\\HelloWaterWorld.ps1'
       }
     }
+    stage('Deploy') {
+      steps {
+        powershell 'scripts\\TurnToStone.ps1'
+      }
+    }
   }
 }
