@@ -12,5 +12,10 @@ pipeline {
         powershell 'scripts\\TurnToStone.ps1'
       }
     }
+    stage('Retest') {
+      steps {
+        tool(name: 'DefaultVSTest', type: 'VSTest')
+      }
+    }
   }
 }
